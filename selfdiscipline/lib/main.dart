@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:selfdiscipline/widget/controller_demo_page.dart';
 import 'package:selfdiscipline/widget/clip_demo_page.dart';
 import 'package:selfdiscipline/widget/scroll_listener_demo_page.dart';
+import 'package:selfdiscipline/widget/scroller_to_index_demo_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -64,7 +65,8 @@ class _MyHomePageState extends State<MyHomePage> {
 const routerName = [
   "controller 例子",
   "圆角 例子",
-  "滑动监听 例子"
+  "滑动监听 例子",
+  "滚动到指定行"
 ];
 
 Map<String, WidgetBuilder> routers = {
@@ -76,5 +78,8 @@ Map<String, WidgetBuilder> routers = {
   },
   "widget/scroll": (context){
     return new ScrollerListenerDemoPage();
+  },
+  "widget/scrollToIndex": (context){
+    return new ScrollToIndexDemoPage();
   }
 };
