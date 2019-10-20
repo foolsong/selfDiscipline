@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:selfdiscipline/widget/controller_demo_page.dart';
+import 'package:selfdiscipline/widget/container_demo_page.dart';
+import 'package:selfdiscipline/widget/row_demo_page.dart';
+import 'package:selfdiscipline/widget/column_demo_page.dart';
+import 'package:selfdiscipline/widget/scaffold_demo_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -57,50 +60,26 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
   }
-  // int _counter = 0;
-
-  // void _incrementCounter() {
-  //   setState(() {
-  //     _counter++;
-  //   });
-  // }
-
-  // @override
-  // Widget build(BuildContext context) {
-  //   return Scaffold(
-  //     appBar: AppBar(
-  //       title: Text(widget.title),
-  //     ),
-  //     body: Center(
-  //       child: Column(
-  //         mainAxisAlignment: MainAxisAlignment.center,
-  //         children: <Widget>[
-  //           Text(
-  //             'You have pushed the button this many times:',
-  //           ),
-  //           Text(
-  //             '$_counter',
-  //             style: Theme.of(context).textTheme.display1,
-  //           ),
-  //         ],
-  //       ),
-  //     ),
-  //     floatingActionButton: FloatingActionButton(
-  //       onPressed: _incrementCounter,
-  //       tooltip: 'Increment',
-  //       child: Icon(Icons.add),
-  //     ), // This trailing comma makes auto-formatting nicer for build methods.
-  //   );
-  // }
 }
 
 const routerName = [
-  "controller 例子",
-  "圆角 例子"
+  "Container 例子",
+  "Row 例子",
+  "column 例子",
+  "scaffold 例子",
 ];
 
 Map<String, WidgetBuilder> routers = {
   "widget/controller" : (context){
-    return new ControllerDemoPage();
+    return new ContainerDemoPage();
+  },
+  "widget/row" : (context){
+    return new RowDemoPage();
+  },
+  "widget/column" : (context){
+    return new ColumnDemoPage();
+  },
+  "widget/scaffold01" : (context){
+    return new ScaffoldDemoPage01();
   },
 };
