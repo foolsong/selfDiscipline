@@ -3,6 +3,7 @@ import 'package:selfdiscipline/widget/container_demo_page.dart';
 import 'package:selfdiscipline/widget/row_demo_page.dart';
 import 'package:selfdiscipline/widget/column_demo_page.dart';
 import 'package:selfdiscipline/widget/scaffold_demo_page.dart';
+import 'package:selfdiscipline/widget/scaffold_demo_page02.dart';
 
 void main() => runApp(MyApp());
 
@@ -67,6 +68,7 @@ const routerName = [
   "Row 例子",
   "column 例子",
   "scaffold 例子",
+  "scaffold02 例子",
 ];
 
 Map<String, WidgetBuilder> routers = {
@@ -82,4 +84,8 @@ Map<String, WidgetBuilder> routers = {
   "widget/scaffold01" : (context){
     return new ScaffoldDemoPage01();
   },
+  "widget/scaffold02" : (context){
+    return new ScaffoldDemoPage02();
+  },
+  
 };
